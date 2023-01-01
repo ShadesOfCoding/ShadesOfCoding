@@ -1,0 +1,67 @@
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    
+}
+
+.container-fluid{
+    height: 97vh;
+}
+
+.cover-container{
+    background-image: linear-gradient(to bottom right, rgb(0, 59, 114), rgba(0, 68, 255, 0.734));
+}
+
+.cover{
+    height: 97vh;
+    color: aliceblue;
+}
+
+.cover-heading{
+    padding-top: 20%;
+}
+
+#headerP1{
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+hr{
+    background-color: black;
+    width: 25rem;
+    border-width: 1px;
+}
+
+#chart2p{
+    padding-top: 20px;
+}
+#chart2p a{
+    color: rgb(60, 60, 204);
+
+}
+
+.page2{
+background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);        color: #ffffff;
+
+}
+
+#page2hr{
+    background-color: white;
+}
+
+.page3{
+    height: 95vh;
+}
+
+.btnp2{
+    margin-top: 5rem;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.btnp2 a{
+    color: #ffffff;
+    text-decoration: none;
+}
+

@@ -1,0 +1,52 @@
+body {
+  margin: 0px;
+  height: 100vh;
+
+}
+
+.line-path {
+  fill: none;
+  
+  stroke-width: 5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  mix-blend-mode: multiply;
+}
+
+text {
+  font-family: 'Share Tech', sans-serif;
+}
+
+.tick text {
+  font-size: 1rem;
+  fill: #635F5D;
+}
+
+.tick line {
+  stroke: #C0C0BB;
+}
+
+.axis-label {
+  font-size: 2em;
+  fill: #2E86C1;
+}
+
+.title {
+  font-size: 2em;
+  fill: #2E86C1;
+}
+
+.de{
+  color: #1f77b4;
+}
+.cz{
+  color: #ff7f0e;
+}
+.th{
+  color: 
+  #2ca02c;
+}
+.usa{
+  color: 
+  #d62728;
+}

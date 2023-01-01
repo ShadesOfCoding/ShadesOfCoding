@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v3.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Data Visualization </title>
+  </head>
+
+  <body class="text-center">
+
+    <!--Navbar start-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Data Visualization</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Homes <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Plots
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/data.html">SPI Data Analyze</a>
+              <a class="dropdown-item" href="/pop/index.html">World Population</a>
+              <a class="dropdown-item" href="/jobrate/index.html">Employment Rate</a>
+              <a class="dropdown-item" href="/map/index.html">Choropleth Map of incomes</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ref.html">References</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--Navbar Ends-->
+    <br><br>
+
+    <!--Landigpage start-->
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Data Visualization</h1>
+        <p class="lead">
+          Visualizing four different dataset, a social progress index (spi) done by <span>Rouhollah Ghobadinezhad</span>, Top 30 countries by they population bar chart, 
+          <br> Top 30 countries by they population bar chart, Multiple line Chart od Employment Rate from four different country and 
+          <br>  an Interactive Worldmap with geoStereographic view from countries income done by Chawin Sungwalngern
+        </p>
+      </main>
+    </div>
+
+
+<div class="page1">
+    <!--BARCHART top 30-->
+    <div class="container d-flex h-100 p-3 mx-auto flex-column">
+      <p id="headerP1">Top 83 Countries</p>
+      <hr>
+      <div class="container-fluid">
+        <br><br>
+        <div id="spi_score_bar_chart"></div>
+        <p>
+          The Social Progress Index (SPI) measures the extent to which countries provide for the social and environmental needs of their citizens.
+           Fifty-four indicators in the areas of basic human needs, foundations of well-being, and opportunity to progress show the relative performance of nations.
+            The index is published by the nonprofit Social Progress Imperative, and is based on the writings of Amartya Sen, Douglass North, and Joseph Stiglitz.
+             The SPI measures the well-being of a society by observing social and environmental outcomes directly rather than the economic factors.
+              The social and environmental factors include wellness (including health, shelter and sanitation), equality, inclusion, sustainability and personal freedom and safety.<a href="https://en.wikipedia.org/wiki/Social_Progress_Index">[1]</a>
+                Norway is on the top on our list, compare to all other 166 countries in our dataset, norway have the most basic human needs, access to basic knowledge, personal_safety, opertunity and more which we talk about it at 
+                <a href="/data.html">SPI Analyze</a> section.
+            </p>
+      </div>
+  </div>
+</div>
+
+
+    <!--pie chart top 30-->
+   <div class="page2">
+        <div class="container d-flex h-100 p-3 mx-auto flex-column">
+      <p id="headerP1">Last 83 Countries</p>
+      <hr id="page2hr">
+      <div class="container-fluid">
+        <br><br>
+        <svg width="1060" height="400" id="svg2"></svg>
+        <p id="chart2p">
+          In our <a href="https://www.kaggle.com/datasets/kabhishm/social-progress-index">dataset</a> exist 166 countries, and South Sudan sit at the last place. South Sudan has the worse envirement quality, most limited access to information and comminucation.
+          to look more about about the first and the last country in our dataset and see the differet reasons why Norway is the frist and South Sudan is the last you can check the SPI Analyze page.
+        </p>
+        <a href="/data.html" class="btn btn-outline-light btnp2" role="button" aria-pressed="true">SPI Analyze</a>
+
+      </div>
+  </div>
+   </div>
+
+
+   <div class="page3">
+    <div class="container d-flex h-100 p-3 mx-auto flex-column">
+      <p id="headerP1">Plots</p>
+      <hr id="page2hr">
+      <br><br>
+      <div class="container-fluid">
+        <div class="card-group">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="/css/img/pop.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">World Population</h5>
+              <p class="card-text">This bar chart shows population of the top 30 countries. The data comes from the year 2020.</p>
+              <a href="/pop/index.html" class="btn btn-primary">Go to plot</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="/css/img/emp.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Employmentrate of 4 Countries</h5>
+              <p class="card-text">A Multiple line chart of 4 countries employment rate. </p>
+              <br>
+              <a href="/jobrate/index.html" class="btn btn-primary">Go to plot</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="/css/img/map.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Choropleth Map of incomes</h5>
+              <p class="card-text">Interactive Worldmap with geoStereographic view based on world's country incomes.</p>
+              <br>
+              <a href="/map/index.html" class="btn btn-primary">Go to map</a>
+            </div>
+          </div>
+        </div>
+        <br>
+    </div>
+  </div>
+   </div>
+<br><br><br><br>
+
+      <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+        <div class="container text-center">
+          <small><a href="https://www.linkedin.com/in/rouhollah-ghobadinezhad-b55b84174">Rouhollah Ghobadinezhad</a> & 
+            Chawin Sungwalngern </small>
+        </div>
+      </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="bundle.js"></script>
+    <script src="js/SPI_top.js"></script>
+    <script src="js/map.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

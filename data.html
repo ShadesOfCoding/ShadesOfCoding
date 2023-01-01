@@ -1,0 +1,102 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://d3js.org/d3.v6.js"></script>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+
+    <title>SPI Data Analyze</title>
+  </head>
+
+  <body class="text-center">
+
+    <!--Navbar start-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="../index.html">Data Visualization | SPI Data Analyze</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Homes <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Plots
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item active" href="/data.html">SPI Data Analyze</a>
+              <a class="dropdown-item" href="/pop/index.html">World Population</a>
+              <a class="dropdown-item" href="../jobrate/index.html">Employmentrate</a>
+              <a class="dropdown-item" href="/map/index.html">Choropleth Map of incomes</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/ref.html">References</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--Navbar Ends-->
+    <br><br>
+
+
+
+    <div class="container-fluid">
+      <br><br>
+      <p id="headerP1">SPI Data Analyze</p>
+      <hr id="page2hr">
+      <br>
+      <div class="row align-items-center">
+        <div class="col">
+
+
+        </div>
+        <div class="col">
+            <button onclick="update('Norway')">1.Norway</button>
+            <button onclick="update('South_Sudan')">166.South Suden</button>
+            
+            <!-- Create a div where the graph will take place -->
+            <div id="my_dataviz"></div>
+        </div>
+        <div class="col">
+
+        </div>
+      </div>
+      <br><br>
+      <p>
+        As we talked before, Norway is the first and South Sudan is the last country in our dataset. but why? how they decide which country place where? you simply can compare this two country
+        <br> by they scores, i picked the first and the last than the score differeces be obvious and easy to see. At X-axis you see social and environmental needs and at Y-axis you see 
+        <br> they score in range of 0 to 100. <a href="https://d3-graph-gallery.com/graph/barplot_button_data_csv.html">[7]</a>
+      </p>
+      <br><br><br>
+      
+    </div>
+    <br><br><br>
+
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+        <div class="container text-center">
+          <small><a href="https://www.linkedin.com/in/rouhollah-ghobadinezhad-b55b84174">Rouhollah Ghobadinezhad</a> & 
+            Chawin Sungwalngern </small>
+        </div>
+      </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+<script src="js/data.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

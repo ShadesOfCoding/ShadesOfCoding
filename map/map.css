@@ -1,0 +1,34 @@
+body {
+  margin: 0px;
+}
+
+svg{
+  background-image: url("/css/img/bg.jpg");
+  background-size: cover;
+}
+
+.sphere {
+  fill: #CDDEFF;
+  background-color: #2B3A55;
+}
+
+.country {
+  stroke: black;
+  stroke-width: 0.05px;
+}
+
+.country:hover {
+  stroke: #161616;
+  fill: #F806CC;
+}
+
+.tick text {
+  font-size: 1em;
+  fill: black;
+  font-family: 'Share Tech', sans-serif;
+}
+
+.tick circle {
+  stroke: black;
+  stroke-opacity: 0.5;
+}
